@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eNews Ticker</title>
+  <link rel="stylesheet" href="ent-admin.css">
+  <link rel="stylesheet" href="ent-style.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="jquery-3.6.0.min.js"></script>
+  <script src="jquery.easing.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <script src="ent-script.min.js"></script>
+  <script src="ent-admin.js"></script>
+  <script src="script_text_Ticker.js" referrerpolicy="no-referrer"></script>
+<title>breaking news Ticker</title>
+
+</head>
+
+<body>
+ <section>
+    <h2>Animation</h2>
+    <h4>Scroll</h4>
+    <div id="newsTicker1"></div>
+    <h4>Slide (Vertical)</h4>
+    <div id="newsTicker2"></div>
+    <h4>Slide (Horizontal)</h4>
+    <div id="newsTicker3"></div>
+    <h4>Fade</h4>
+    <div id="newsTicker4"></div>
+    <h4>Typewriter</h4>
+    <div id="newsTicker5"></div>
+  </section>
+  <section>
+    <h2>Themes</h2>
+    <h4>Theme #1</h4>
+    <div id="newsTicker_theme1"></div>
+    <h4>Theme #2</h4>
+    <div id="newsTicker_theme2"></div>
+    <h4>Theme #3</h4>
+    <div id="newsTicker_theme3"></div>
+    <h4>Theme #4</h4>
+    <div id="newsTicker_theme4"></div>
+    <h4>Theme #5</h4>
+    <div id="newsTicker_theme5"></div>
+    <h4>Theme #6</h4>
+    <div id="newsTicker_theme6"></div>
+    <h4>Theme #7</h4>
+    <div id="newsTicker_theme7"></div>
+    <h4>Theme #8</h4>
+    <div id="newsTicker_theme8"></div>
+    <h4>Theme #9</h4>
+    <div id="newsTicker_theme9"></div>
+    <h4>Theme #10</h4>
+    <div id="newsTicker_theme10"></div>
+  </section>
+  <section>
+
+  </script>
+$(document).ready(function() {
+  var news = [{
+    "date": "June 8, 2023",
+    "prefix": "CNN: Sport",
+    "heading": "Alexis Mac Allister: Liverpool sign Brighton Argentina midfielder for £35m.",
+    "url": "https://"
+  }, {
+    "date": "June 8, 2023",
+    "prefix": "CNN: uk Sport",
+    "heading": "Alexis Mac Allister: Liverpool sign Brighton Argentina midfielder for £35m.",
+    "url": "https://"
+  }, {
+    "date": "June 8, 2023",
+    "prefix": "CNN: Sport",
+    "heading": "Alexis Mac Allister: Liverpool sign Brighton Argentina midfielder for £35m.",
+    "url": "https://"
+  }, {
+    "date": "June 8, 2023",
+    "prefix": "BBC: Sport",
+    "heading": "Alexis Mac Allister: Liverpool sign Brighton Argentina midfielder for £35m.",
+    "url": "https://"
+  }, {
+    "date": "June 8, 2023",
+    "prefix": "BBC: Sport",
+    "heading": "Alexis Mac Allister: Liverpool sign Brighton Argentina midfielder for £35m.",
+    "url": "https://"
+  }];
+
+  $("#newsTicker1").easyNewsTicker({
+    "animation": {
+      "effect": "scroll",
+    },
+    "data": news
+  });
+  $("#newsTicker2").easyNewsTicker({
+    "animation": {
+      "effect": "slide-vertical",
+      "easing": "easeInOutExpo",
+      "duration": 1000
+    },
+    "data": news
+  });
+  $("#newsTicker3").easyNewsTicker({
+    "animation": {
+      "effect": "slide-horizontal",
+      "easing": "easeInOutExpo",
+      "duration": 1500
+    },
+    "data": news
+  });
+  $("#newsTicker4").easyNewsTicker({
+    "animation": {
+      "effect": "fade",
+    },
+    "data": news
+  });
+  $("#newsTicker5").easyNewsTicker({
+    "animation": {
+      "effect": "typewriter",
+    },
+    "data": news
+  });
+
+  // THEMES
+  for(var i = 1; i <= 10; i++) {
+    $("#newsTicker_theme"+i).easyNewsTicker({
+      "theme": i,
+      "animation": {
+        "effect": "slide-vertical",
+        "easing": "easeInOutExpo",
+        "duration": 1000
+      },
+      "data": news
+    });
+  }
+});
+  </script>
+
+
+</body>
+
+</html>
