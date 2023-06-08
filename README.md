@@ -1,2 +1,0 @@
-# Ticker
-breaking news Ticker 
